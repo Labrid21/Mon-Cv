@@ -17,10 +17,9 @@
         var email = document.getElementById("email").value;
         var message = document.getElementById("message").value;
     
-        var mailtoLink = `mailto:Elbrid21@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
+        var gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=Elbrid21@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
     
-        document.getElementById("mailtoLink").href = mailtoLink;
-        document.getElementById("mailtoLink").click();
+        window.open(gmailLink, '_blank');
       }
     </script>
     <noscript>
@@ -559,9 +558,7 @@
                     </div>
                     <div class="row">
                       <div class="col">
-                        <a id="mailtoLink" href="#">
-                          <button class="btn btn-primary" type="button" onclick="sendEmail()">Envoyer</button>
-                        </a>
+                        <button class="btn btn-primary" type="button" onclick="sendEmail()">Envoyer</button>
                       </div>
                     </div>
                   </div>
